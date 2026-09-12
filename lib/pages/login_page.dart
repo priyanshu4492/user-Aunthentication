@@ -21,6 +21,7 @@ class LoginPage extends StatelessWidget {
       body: SafeArea(
         child: Center(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(height: 50),
               //logo
@@ -49,6 +50,7 @@ class LoginPage extends StatelessWidget {
                 obscureText: true,
               ),
 
+              const SizedBox(height: 10),
               //forgot password
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 25.0),
@@ -109,9 +111,18 @@ class LoginPage extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text("Not a member?"),
+                  Text(
+                    "Not a member?",
+                    style: TextStyle(color: Colors.grey[700]),
+                  ),
                   const SizedBox(width: 4),
-                  Text("Register now", style: TextStyle(color: Colors.blue)),
+                const  Text(
+                    "Register now",
+                    style: TextStyle(
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
                 ],
               ),
             ],
